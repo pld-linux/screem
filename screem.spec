@@ -55,7 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/screem/plugins
 %attr(755,root,root) %{_libdir}/screem/plugins/*
 %{_datadir}/screem
-%{_datadir}/pixmaps/*
+%{_pixmapsdir}/*
 %{_datadir}/mime-info/screem.keys
 %{_datadir}/mime-info/screem.mime
 %{_applnkdir}/Office/Editors/screem.desktop
