@@ -1,11 +1,11 @@
 Summary:	Web Site CReating and Editing EnvironMent
 Name:		screem
-Version:	0.2.10
+Version:	0.3.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Editors
 Group(pl):	X11/Aplikacje/Edytory
-Source0:	http://www.screem.org/src/%{name}-%{version}.tar.gz
+Source0:	ftp://download.sourceforge.net/pub/sourceforge/screem/%{name}-%{version}.tar.gz
 URL:		http://www.screem.org/
 BuildRequires:	gdk-pixbuf-devel >= 0.7
 BuildRequires:	gettext-devel
@@ -43,7 +43,7 @@ strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/screem/plugins/*.so
 
 gzip -9nf ChangeLog NEWS README TODO FAQ BUGS DEPENDS
 
-%find_lang %{name}
+%find_lang %{name} --with-gnome
 
 %clean
 rm -rf $RPM_BUILD_ROOT
