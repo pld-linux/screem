@@ -41,7 +41,7 @@ libtoolize --copy --force
 gettextize --copy --force
 aclocal -I macros
 autoconf
-automake -a -c
+automake -a -c -f
 %configure \
 	--enable-static=no
 %{__make}
