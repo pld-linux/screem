@@ -1,14 +1,14 @@
 Summary:	Web Site CReating and Editing EnvironMent
 Summary(pl):	¦rodowisko do tworzenia i edycji serwisów WWW
 Name:		screem
-Version:	0.10.2
-Release:	3
+Version:	0.12.1
+Release:	0.1
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	a58c72555a6cecf34c2e2f6d9fda0288
+# Source0-md5:	4d1f50deee2888f0ac094cb3df61f1ad
 Patch0:		%{name}-desktop.patch
-Patch1:		%{name}-libcroco.patch
+#Patch1:		%{name}-libcroco.patch
 URL:		http://www.screem.org/
 BuildRequires:	GConf2-devel
 BuildRequires:	automake
@@ -45,7 +45,7 @@ SCREEM (Site CReating and Editing EnvironMent) jest zintegrowanym
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
+#%patch1 -p1
 
 %build
 cp -f /usr/share/automake/config.* .
