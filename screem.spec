@@ -39,11 +39,11 @@ SCREEM (Site CReating and Editing EnvironMent) jest zingtegrowanym
 %patch1 -p1
 
 %build
-#%{__libtoolize}
-#%{__gettextize}
+#%%{__libtoolize}
+#%%{__gettextize}
 #aclocal -I macros
-#%{__autoconf}
-#%{__automake}
+#%%{__autoconf}
+#%%{__automake}
 %configure2_13 \
 	--enable-static=no
 %{__make}
