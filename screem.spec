@@ -1,52 +1,62 @@
-%define	ver	0.2.10
-%define	rel	1
-%define	prefix	/usr
+Summary:	Web Site CReating and Editing EnvironMent
+Name:		screem
+Version:	0.2.10
+Release:	1
+License:	GPL
+Group:		X11/Applications/Editors
+Group(pl):	X11/Aplikacje/Edytory
+Source0:	http://www.screem.org/src/%{name}-%{version}.tar.gz
+URL:		http://www.screem.org/
+BuildRequires:	gdk-pixbuf-devel >= 0.7
+BuildRequires:	gettext-devel
+BuildRequires:	gnome-libs-devel >= 1.2.0
+BuildRequires:	gnome-print-devel >= 0.19
+BuildRequires:	libxml-devel >= 1.8.7
+BuildRequires:	libglade-devel >= 0.12
+BuildRequires:	w3c-libwww-devel
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-Summary: Web Site CReating and Editing EnvironMent
-Name:	screem
-Version:	%ver
-Release:	%rel
-Copyright:	GPL
-Group:	Applications/
-Source:	http://www.screem.org/src/screem-%{ver}.tar.gz
-Url:	http://www.screem.org
-BuildRoot:	/var/tmp/screem-%{PACKAGE_VERSION}-root
-Obsoletes:	screem
-Docdir:	%{prefix}/doc
-
-Requires:	gnome-libs >= 1.2.0
-Requires:	libxml >= 1.8.7
-Requires:	libglade >= 0.12
-Requires:	gdk-pixbuf >= 0.7
+%define		_prefix		/usr/X11R6
 
 %description
-SCREEM (Site CReating and Editing EnvironMent) is an integrated development
-environment for the creation and maintainance of websites and pages.
+SCREEM (Site CReating and Editing EnvironMent) is an integrated
+development environment for the creation and maintainance of websites
+and pages.
 
 %prep
-%setup
+%setup -q
 
 %build
-./configure --prefix=%prefix --enable-static=no --with-gnome=$RPM_BUILD_ROOT%{prefix}
-make
+gettextize --copy --force
+LDFLAGS="-s"; export LDFLAGS
+%configure \
+	--enable-static=no
+%{__make}
 
 %install
+rm -rf $RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT \
+	Applicationsdir=%{_applnkdir}/Office/Editors
 
-make prefix=$RPM_BUILD_ROOT%{prefix} install
+strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/screem/plugins/*.so
+
+gzip -9nf ChangeLog NEWS README TODO FAQ BUGS DEPENDS
+
+%find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
-%defattr(-, root, root)
-
-%doc docs AUTHORS ChangeLog NEWS README COPYING TODO FAQ BUGS DEPENDS
-
-%{prefix}/bin/*
-%{prefix}/lib/screem/*
-%{prefix}/share/screem/*
-%{prefix}/share/pixmaps/screem*
-%{prefix}/share/mime-info/screem.keys
-%{prefix}/share/mime-info/screem.mime
-%{prefix}/share/gnome/apps/Development/screem.desktop
-%{prefix}/share/mc/templates/screem.desktop
+%files -f %{name}.lang
+%defattr(644,root,root,755)
+%doc *.gz
+%attr(755,root,root) %{_bindir}/*
+%dir %{_libdir}/screem
+%dir %{_libdir}/screem/plugins
+%attr(755,root,root) %{_libdir}/screem/plugins/*
+%{_datadir}/screem
+%{_datadir}/pixmaps/*
+%{_datadir}/mime-info/screem.keys
+%{_datadir}/mime-info/screem.mime
+%{_applnkdir}/Office/Editors/screem.desktop
