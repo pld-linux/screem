@@ -2,7 +2,7 @@ Summary:	Web Site CReating and Editing EnvironMent
 Summary(pl):	¦rodowisko do tworzenia i edycji serwisów WWW
 Name:		screem
 Version:	0.7.1
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
@@ -26,7 +26,7 @@ BuildRequires:	libgtkhtml-devel
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel >= 2.4.3
 BuildRequires:	scrollkeeper
-Requires(post):	Gconf2
+Requires(post):	GConf2
 Requires(post):	/usr/bin/scrollkeeper-update
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
