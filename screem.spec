@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	http://dl.sourceforge.net/screem/%{name}-%{version}.tar.gz
+# Source0-md5:	be4a17847058409d26db0b5dd8022b3f
 URL:		http://www.screem.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
