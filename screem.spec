@@ -9,11 +9,11 @@ Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	fd1c6f8c2867a43028621cbdd944b9df
 URL:		http://www.screem.org/
 BuildRequires:	GConf2-devel
-BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glib2-devel >= 2.2.0
 BuildRequires:	gnome-vfs2-devel
 BuildRequires:	gtk+2-devel >= 2.2.0
+BuildRequires:	gtksourceview-devel
 BuildRequires:	intltool >= 0.18
 BuildRequires:	libbonobo-devel
 BuildRequires:	libbonoboui-devel >= 2.4.0
@@ -23,11 +23,9 @@ BuildRequires:	libgnomeprint-devel >= 2.2.0
 BuildRequires:	libgnomeprintui-devel >= 2.2.0
 BuildRequires:	libgnomeui-devel >= 2.4.0.1
 BuildRequires:	libgtkhtml-devel
-BuildRequires:	libtool
 BuildRequires:	libxml2-devel >= 2.4.3
-BuildRequires:	scrollkeeper
-BuildRequires:	gtksourceview-devel
 BuildRequires:	perl-XML-Parser
+BuildRequires:	scrollkeeper
 Requires(post):	GConf2
 Requires(post):	/usr/bin/scrollkeeper-update
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -45,12 +43,14 @@ SCREEM (Site CReating and Editing EnvironMent) jest zingtegrowanym
 %setup -q
 
 %build
+cp -f /usr/share/automake/config.* .
 %configure
 
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
