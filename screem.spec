@@ -38,7 +38,7 @@ SCREEM (Site CReating and Editing EnvironMent) jest zingtegrowanym
 
 %build
 %{__libtoolize}
-gettextize --copy --force
+%{__gettextize}
 aclocal -I macros
 %{__autoconf}
 %{__automake}
