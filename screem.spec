@@ -2,7 +2,7 @@ Summary:	Web Site CReating and Editing EnvironMent
 Summary(pl):	¦rodowisko do tworzenia i edycji serwisów WWW
 Name:		screem
 Version:	0.4.1
-Release:	5
+Release:	6
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	http://ftp1.sourceforge.net/screem/%{name}-%{version}.tar.gz
@@ -49,12 +49,11 @@ SCREEM (Site CReating and Editing EnvironMent) jest zingtegrowanym
 	--enable-static=no
 %{__make}
 
-
 %install
 rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	Applicationsdir=%{_applnkdir}/Office/Editors
+	Applicationsdir=%{_applnkdir}/Editors/HTML
 
 %find_lang %{name} --with-gnome
 
@@ -72,4 +71,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_pixmapsdir}/*
 %{_datadir}/mime-info/screem.keys
 %{_datadir}/mime-info/screem.mime
-%{_applnkdir}/Office/Editors/screem.desktop
+%{_applnkdir}/Editors/HTML/screem.desktop
