@@ -1,19 +1,20 @@
 Summary:	Web Site CReating and Editing EnvironMent
 Name:		screem
 Version:	0.3.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Editors
+Group(de):	X11/Applikationen/Editors
 Group(pl):	X11/Aplikacje/Edytory
+Group(pt):	X11/Aplicações/Editores
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/screem/%{name}-%{version}.tar.gz
 URL:		http://www.screem.org/
 BuildRequires:	gdk-pixbuf-devel >= 0.7
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel >= 1.2.0
-BuildRequires:	gnome-print-devel >= 0.19
+BuildRequires:	gnome-print-devel >= 0.24
 BuildRequires:	libxml-devel >= 1.8.7
 BuildRequires:	libglade-devel >= 0.12
-BuildRequires:	w3c-libwww-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -28,7 +29,6 @@ and pages.
 
 %build
 gettextize --copy --force
-LDFLAGS="-s"; export LDFLAGS
 %configure \
 	--enable-static=no
 %{__make}
@@ -38,8 +38,6 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	Applicationsdir=%{_applnkdir}/Office/Editors
-
-strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/screem/plugins/*.so
 
 gzip -9nf ChangeLog NEWS README TODO FAQ BUGS DEPENDS
 
