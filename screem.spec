@@ -5,9 +5,6 @@ Version:	0.4.1
 Release:	4
 License:	GPL
 Group:		X11/Applications/Editors
-Group(de):	X11/Applikationen/Editors
-Group(pl):	X11/Aplikacje/Edytory
-Group(pt):	X11/Aplicações/Editores
 Source0:	http://ftp1.sourceforge.net/screem/%{name}-%{version}.tar.gz
 Patch0:		%{name}-use_AM_GNU_GETTEXT.patch
 URL:		http://www.screem.org/
