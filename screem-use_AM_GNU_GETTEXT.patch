@@ -1,0 +1,11 @@
+--- screem-0.4.1/configure.in~	Wed Mar  7 23:13:20 2001
++++ screem-0.4.1/configure.in	Thu Apr 19 02:11:05 2001
+@@ -262,7 +262,7 @@
+ 
+ dnl internationalisation support
+ ALL_LINGUAS="az da de es_ES fr it ja no pl pt_BR ru sv tr uk"
+-AM_GNOME_GETTEXT
++AM_GNU_GETTEXT
+ 
+ dnl CFLAGS="$CFLAGS -ansi -pedantic"
+ 
