@@ -40,8 +40,8 @@ SCREEM (Site CReating and Editing EnvironMent) jest zingtegrowanym
 libtoolize --copy --force
 gettextize --copy --force
 aclocal -I macros
-autoconf
-automake -a -c -f
+%{__autoconf}
+%{__automake}
 %configure \
 	--enable-static=no
 %{__make}
