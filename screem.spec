@@ -1,14 +1,15 @@
 Summary:	Web Site CReating and Editing EnvironMent
 Name:		screem
 Version:	0.4.1
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11/Applications/Editors
 Group(de):	X11/Applikationen/Editors
 Group(pl):	X11/Aplikacje/Edytory
 Group(pt):	X11/Aplicações/Editores
 Source0:	http://ftp1.sourceforge.net/screem/%{name}-%{version}.tar.gz
-patch0:		%{name}-use_AM_GNU_GETTEXT.patch
+Patch0:		%{name}-use_AM_GNU_GETTEXT.patch
+Parch1:		%{name}-no_hardcoded_term_sequences.patch
 URL:		http://www.screem.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -32,8 +33,10 @@ and pages.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
+libtoolize --copy --force
 gettextize --copy --force
 aclocal -I macros
 autoconf
