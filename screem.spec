@@ -56,8 +56,6 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	Applicationsdir=%{_applnkdir}/Office/Editors
 
-gzip -9nf ChangeLog NEWS README TODO FAQ BUGS DEPENDS
-
 %find_lang %{name} --with-gnome
 
 %clean
@@ -65,7 +63,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc *.gz
+%doc ChangeLog NEWS README TODO FAQ BUGS DEPENDS
 %attr(755,root,root) %{_bindir}/*
 %dir %{_libdir}/screem
 %dir %{_libdir}/screem/plugins
