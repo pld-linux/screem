@@ -1,7 +1,7 @@
 Summary:	Web Site CReating and Editing EnvironMent
 Name:		screem
-Version:	0.3.0
-Release:	5
+Version:	0.4.0
+Release:	1
 License:	GPL
 Group:		X11/Applications/Editors
 Group(de):	X11/Applikationen/Editors
