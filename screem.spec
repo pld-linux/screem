@@ -13,7 +13,7 @@ URL:		http://www.screem.org/
 BuildRequires:	GConf2-devel >= 2.2.0
 BuildRequires:	automake
 BuildRequires:	dbus-glib-devel >= 0.22
-BuildRequires:	glib2-devel >= 2.2.0
+BuildRequires:	glib2-devel >= 2.5.6
 BuildRequires:	gnome-vfs2-devel >= 2.2.0
 BuildRequires:	gtk+2-devel >= 2:2.4.0
 BuildRequires:	gtksourceview-devel >= 0.3.0
