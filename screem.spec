@@ -1,7 +1,7 @@
 Summary:	Web Site CReating and Editing EnvironMent
 Name:		screem
 Version:	0.3.0
-Release:	4
+Release:	5
 License:	GPL
 Group:		X11/Applications/Editors
 Group(de):	X11/Applikationen/Editors
@@ -53,7 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %dir %{_libdir}/screem
 %dir %{_libdir}/screem/plugins
-%attr(755,root,root) %{_libdir}/screem/plugins/*
+%attr(755,root,root) %{_libdir}/screem/plugins/*.so
 %{_datadir}/screem
 %{_pixmapsdir}/*
 %{_datadir}/mime-info/screem.keys
