@@ -1,14 +1,17 @@
 Summary:	Web Site CReating and Editing EnvironMent
 Name:		screem
 Version:	0.4.1
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications/Editors
 Group(de):	X11/Applikationen/Editors
 Group(pl):	X11/Aplikacje/Edytory
 Group(pt):	X11/Aplicações/Editores
 Source0:	http://ftp1.sourceforge.net/screem/%{name}-%{version}.tar.gz
+patch0:		%{name}-use_AM_GNU_GETTEXT.patch
 URL:		http://www.screem.org/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	gdk-pixbuf-devel >= 0.7
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel >= 1.2.0
@@ -28,9 +31,13 @@ and pages.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 gettextize --copy --force
+aclocal -I macros
+autoconf
+automake -a -c
 %configure \
 	--enable-static=no
 %{__make}
