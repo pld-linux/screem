@@ -1,13 +1,13 @@
 Summary:	Web Site CReating and Editing EnvironMent
 Name:		screem
-Version:	0.4.0
+Version:	0.4.1
 Release:	1
 License:	GPL
 Group:		X11/Applications/Editors
 Group(de):	X11/Applikationen/Editors
 Group(pl):	X11/Aplikacje/Edytory
 Group(pt):	X11/Aplicações/Editores
-Source0:	ftp://download.sourceforge.net/pub/sourceforge/screem/%{name}-%{version}.tar.gz
+Source0:	http://ftp1.sourceforge.net/screem/%{name}-%{version}.tar.gz
 URL:		http://www.screem.org/
 BuildRequires:	gdk-pixbuf-devel >= 0.7
 BuildRequires:	gettext-devel
