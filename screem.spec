@@ -7,6 +7,7 @@ License:	GPL
 Group:		X11/Applications/Editors
 Source0:	http://ftp1.sourceforge.net/screem/%{name}-%{version}.tar.gz
 Patch0:		%{name}-use_AM_GNU_GETTEXT.patch
+Patch1:		%{name}-make_fix.patch
 URL:		http://www.screem.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -34,17 +35,19 @@ SCREEM (Site CReating and Editing EnvironMent) jest zingtegrowanym
 
 %prep
 %setup -q
-%patch0 -p1
+#%patch0 -p1
+%patch1 -p1
 
 %build
-%{__libtoolize}
-%{__gettextize}
-aclocal -I macros
-%{__autoconf}
-%{__automake}
-%configure \
+#%{__libtoolize}
+#%{__gettextize}
+#aclocal -I macros
+#%{__autoconf}
+#%{__automake}
+%configure2_13 \
 	--enable-static=no
 %{__make}
+
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -65,7 +68,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %dir %{_libdir}/screem
 %dir %{_libdir}/screem/plugins
-%attr(755,root,root) %{_libdir}/screem/plugins/*.so
+%attr(755,root,root) %{_libdir}/screem/plugins/*
 %{_datadir}/screem
 %{_pixmapsdir}/*
 %{_datadir}/mime-info/screem.keys
