@@ -39,7 +39,7 @@ development environment for the creation and maintainance of websites
 and pages.
 
 %description -l pl
-SCREEM (Site CReating and Editing EnvironMent) jest zingtegrowanym
+SCREEM (Site CReating and Editing EnvironMent) jest zintegrowanym
 ¶rodowiskiem do tworzenia i prowadzenia serwisów i stron WWW.
 
 %prep
