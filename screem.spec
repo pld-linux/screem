@@ -23,7 +23,6 @@ BuildRequires:	libglade-devel >= 0.12
 BuildRequires:	gdk-pixbuf-gnome-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 
 %description
 SCREEM (Site CReating and Editing EnvironMent) is an integrated
