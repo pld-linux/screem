@@ -1,7 +1,7 @@
 Summary:	Web Site CReating and Editing EnvironMent
 Name:		screem
 Version:	0.3.0
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications/Editors
 Group(de):	X11/Applikationen/Editors
@@ -13,6 +13,7 @@ BuildRequires:	gdk-pixbuf-devel >= 0.7
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel >= 1.2.0
 BuildRequires:	gnome-print-devel >= 0.24
+BuildRequires:	guile-devel
 BuildRequires:	libxml-devel >= 1.8.7
 BuildRequires:	libglade-devel >= 0.12
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
