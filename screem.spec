@@ -1,4 +1,5 @@
 Summary:	Web Site CReating and Editing EnvironMent
+Summary(pl):	¦rodowisko do tworzenia i edycji serwisów WWW
 Name:		screem
 Version:	0.4.1
 Release:	4
@@ -12,8 +13,9 @@ Patch0:		%{name}-use_AM_GNU_GETTEXT.patch
 URL:		http://www.screem.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gdk-pixbuf-devel >= 0.7
+BuildRequires:	libtool
 BuildRequires:	gettext-devel
+BuildRequires:	gdk-pixbuf-devel >= 0.7
 BuildRequires:	gnome-libs-devel >= 1.2.0
 BuildRequires:	gnome-print-devel >= 0.24
 BuildRequires:	gtkhtml-devel >= 0.8.3
@@ -28,6 +30,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 SCREEM (Site CReating and Editing EnvironMent) is an integrated
 development environment for the creation and maintainance of websites
 and pages.
+
+%description -l pl
+SCREEM (Site CReating and Editing EnvironMent) jest zingtegrowanym
+¶rodowiskiem do tworzenia i prowadzenia serwisów i stron WWW.
 
 %prep
 %setup -q
