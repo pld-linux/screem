@@ -1,0 +1,74 @@
+--- screem-0.10.2.orig/configure	2004-04-10 19:16:53.000000000 +0200
++++ screem-0.10.2/configure	2004-09-17 03:06:28.900148848 +0200
+@@ -19388,7 +19388,7 @@
+ 			libgnomeprint-2.2 >= 2.2.0	\
+ 			libgnomeprintui-2.2 >= 2.2.0 	\
+ 			gtksourceview-1.0 >= 0.3.0 	\
+-			libcroco >= 0.5.0	" >&5
++			libcroco-0.6 >= 0.5.0	" >&5
+ echo $ECHO_N "checking for \
+ 			libgnome-2.0 >= 2.2.0		\
+ 			libgnomeui-2.0 >= 2.2.0 	\
+@@ -19405,7 +19405,7 @@
+ 			libgnomeprint-2.2 >= 2.2.0	\
+ 			libgnomeprintui-2.2 >= 2.2.0 	\
+ 			gtksourceview-1.0 >= 0.3.0 	\
+-			libcroco >= 0.5.0	... $ECHO_C" >&6
++			libcroco-0.6 >= 0.5.0	... $ECHO_C" >&6
+ 
+         if $PKG_CONFIG --exists "\
+ 			libgnome-2.0 >= 2.2.0		\
+@@ -19423,7 +19423,7 @@
+ 			libgnomeprint-2.2 >= 2.2.0	\
+ 			libgnomeprintui-2.2 >= 2.2.0 	\
+ 			gtksourceview-1.0 >= 0.3.0 	\
+-			libcroco >= 0.5.0	" ; then
++			libcroco-0.6 >= 0.5.0	" ; then
+             echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6
+             succeeded=yes
+@@ -19446,7 +19446,7 @@
+ 			libgnomeprint-2.2 >= 2.2.0	\
+ 			libgnomeprintui-2.2 >= 2.2.0 	\
+ 			gtksourceview-1.0 >= 0.3.0 	\
+-			libcroco >= 0.5.0	"`
++			libcroco-0.6 >= 0.5.0	"`
+             echo "$as_me:$LINENO: result: $SCREEM_CFLAGS" >&5
+ echo "${ECHO_T}$SCREEM_CFLAGS" >&6
+ 
+@@ -19468,7 +19468,7 @@
+ 			libgnomeprint-2.2 >= 2.2.0	\
+ 			libgnomeprintui-2.2 >= 2.2.0 	\
+ 			gtksourceview-1.0 >= 0.3.0 	\
+-			libcroco >= 0.5.0	"`
++			libcroco-0.6 >= 0.5.0	"`
+             echo "$as_me:$LINENO: result: $SCREEM_LIBS" >&5
+ echo "${ECHO_T}$SCREEM_LIBS" >&6
+         else
+@@ -19492,7 +19492,7 @@
+ 			libgnomeprint-2.2 >= 2.2.0	\
+ 			libgnomeprintui-2.2 >= 2.2.0 	\
+ 			gtksourceview-1.0 >= 0.3.0 	\
+-			libcroco >= 0.5.0	"`
++			libcroco-0.6 >= 0.5.0	"`
+             echo $SCREEM_PKG_ERRORS
+         fi
+ 
+@@ -19523,7 +19523,7 @@
+ 			libgnomeprint-2.2 >= 2.2.0	\
+ 			libgnomeprintui-2.2 >= 2.2.0 	\
+ 			gtksourceview-1.0 >= 0.3.0 	\
+-			libcroco >= 0.5.0	) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them." >&5
++			libcroco-0.6 >= 0.5.0	) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them." >&5
+ echo "$as_me: error: Library requirements (\
+ 			libgnome-2.0 >= 2.2.0		\
+ 			libgnomeui-2.0 >= 2.2.0 	\
+@@ -19540,7 +19540,7 @@
+ 			libgnomeprint-2.2 >= 2.2.0	\
+ 			libgnomeprintui-2.2 >= 2.2.0 	\
+ 			gtksourceview-1.0 >= 0.3.0 	\
+-			libcroco >= 0.5.0	) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them." >&2;}
++			libcroco-0.6 >= 0.5.0	) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them." >&2;}
+    { (exit 1); exit 1; }; }
+   fi
+ 
