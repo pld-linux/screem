@@ -2,7 +2,7 @@ Summary:	Web Site CReating and Editing EnvironMent
 Summary(pl):	¦rodowisko do tworzenia i edycji serwisów WWW
 Name:		screem
 Version:	0.12.1
-Release:	0.2
+Release:	0.3
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
@@ -70,9 +70,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 /usr/bin/scrollkeeper-update
+update-mime-database %{_datadir}/mime
+[ ! -x /usr/bin/update-desktop-database ] || /usr/bin/update-desktop-database >/dev/null 2>&1 ||:
 %gconf_schema_install
 
 %postun -p /usr/bin/scrollkeeper-update
+update-mime-database %{_datadir}/mime
+[ ! -x /usr/bin/update-desktop-database ] || /usr/bin/update-desktop-database >/dev/null 2>&1 ||:
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
