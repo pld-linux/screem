@@ -26,6 +26,7 @@ BuildRequires:	libgtkhtml-devel
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel >= 2.4.3
 BuildRequires:	scrollkeeper
+BuildRequires:	gtksourceview-devel
 Requires(post):	GConf2
 Requires(post):	/usr/bin/scrollkeeper-update
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
