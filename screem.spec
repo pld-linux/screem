@@ -1,12 +1,12 @@
 Summary:	Web Site CReating and Editing EnvironMent
 Summary(pl):	¦rodowisko do tworzenia i edycji serwisów WWW
 Name:		screem
-Version:	0.7.3
+Version:	0.8.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	c8420035f48afd2260ed6908dacc585f
+# Source0-md5:	e0aa07465c8107a6966fb019c35c31a2
 URL:		http://www.screem.org/
 BuildRequires:	GConf2-devel
 BuildRequires:	autoconf
@@ -16,12 +16,12 @@ BuildRequires:	gnome-vfs2-devel
 BuildRequires:	gtk+2-devel >= 2.2.0
 BuildRequires:	intltool >= 0.18
 BuildRequires:	libbonobo-devel
-BuildRequires:	libbonoboui-devel >= 2.3.3-2
-BuildRequires:	libglade2-devel >= 1.99.2
+BuildRequires:	libbonoboui-devel >= 2.4.0
+BuildRequires:	libglade2-devel >= 2.0.1
 BuildRequires:	libgnome-devel >= 2.2.0
 BuildRequires:	libgnomeprint-devel >= 2.2.0
 BuildRequires:	libgnomeprintui-devel >= 2.2.0
-BuildRequires:	libgnomeui-devel >= 2.3.3.1-2
+BuildRequires:	libgnomeui-devel >= 2.4.0.1
 BuildRequires:	libgtkhtml-devel
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel >= 2.4.3
@@ -77,6 +77,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_pixmapsdir}/*
 %{_sysconfdir}/gconf/schemas/*
 %{_datadir}/application-registry/screem.applications
-%{_datadir}/mime-info/screem.mime
+%{_datadir}/mime-info/screem.*
 %{_desktopdir}/screem.desktop
 %{_omf_dest_dir}/%{name}
