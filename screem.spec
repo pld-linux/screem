@@ -9,7 +9,7 @@ Group(pl):	X11/Aplikacje/Edytory
 Group(pt):	X11/Aplicações/Editores
 Source0:	http://ftp1.sourceforge.net/screem/%{name}-%{version}.tar.gz
 Patch0:		%{name}-use_AM_GNU_GETTEXT.patch
-Parch1:		%{name}-no_hardcoded_term_sequences.patch
+Patch1:		%{name}-no_hardcoded_term_sequences.patch
 URL:		http://www.screem.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
