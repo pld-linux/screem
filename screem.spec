@@ -69,12 +69,15 @@ rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/no
 rm -rf $RPM_BUILD_ROOT
 
 %post
+umask 022
 /usr/bin/scrollkeeper-update
 update-mime-database %{_datadir}/mime
 [ ! -x /usr/bin/update-desktop-database ] || /usr/bin/update-desktop-database >/dev/null 2>&1 ||:
 %gconf_schema_install
 
-%postun -p /usr/bin/scrollkeeper-update
+%postun 
+umask 022
+/usr/bin/scrollkeeper-update
 update-mime-database %{_datadir}/mime
 [ ! -x /usr/bin/update-desktop-database ] || /usr/bin/update-desktop-database >/dev/null 2>&1 ||:
 
