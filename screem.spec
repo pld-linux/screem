@@ -53,7 +53,8 @@ cp -f /usr/share/automake/config.* .
 	--enable-dbus \
 	--disable-update-mime \
 	--disable-update-desktop \
-	--disable-schemas-install
+	--disable-schemas-install \
+	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
 
 %{__make}
 
