@@ -8,6 +8,7 @@ Group:		X11/Applications/Editors
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	a58c72555a6cecf34c2e2f6d9fda0288
 Patch0:		%{name}-desktop.patch
+Patch1:		%{name}-libcroco.patch
 URL:		http://www.screem.org/
 BuildRequires:	GConf2-devel
 BuildRequires:	automake
@@ -18,6 +19,7 @@ BuildRequires:	gtksourceview-devel
 BuildRequires:	intltool >= 0.18
 BuildRequires:	libbonobo-devel
 BuildRequires:	libbonoboui-devel >= 2.4.0
+BuildRequires:	libcroco >= 0.6.0
 BuildRequires:	libglade2-devel >= 2.0.1
 BuildRequires:	libgnome-devel >= 2.2.0
 BuildRequires:	libgnomeprint-devel >= 2.2.0
@@ -43,6 +45,7 @@ SCREEM (Site CReating and Editing EnvironMent) jest zingtegrowanym
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 cp -f /usr/share/automake/config.* .
