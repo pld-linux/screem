@@ -1,0 +1,32 @@
+--- screem-0.8.2/screem.desktop.in~	Thu Jul 15 14:30:49 2004
++++ screem-0.8.2/screem.desktop.in	Thu Jul 15 14:30:49 2004
+@@ -3,7 +3,9 @@
+ _Comment=website editor and management system
+ Exec=screem
+ Icon=screem.png
+-Terminal=0
++Terminal=false
+ Type=Application
+-Categories=Application;Development;
++Categories=GTK;GNOME;Application;Development;
+ StartupNotify=true
++Encoding=UTF-8
++# vi: encoding=utf-8
+--- screem-0.8.2/po/pl.po~	Thu Jul 15 14:29:20 2004
++++ screem-0.8.2/po/pl.po	Thu Jul 15 14:29:20 2004
+@@ -15,13 +15,12 @@
+ "Content-Transfer-Encoding: 8bit\n"
+ 
+ #: screem.desktop.in.h:1
+-#, fuzzy
+ msgid "Screem website editor"
+-msgstr "Screem: edytor szablonw serwisw"
++msgstr "Edytor serwisów WWW Screem"
+ 
+ #: screem.desktop.in.h:2
+ msgid "website editor and management system"
+-msgstr ""
++msgstr "Edytor serwisów WWW i system zarz±dzania nimi"
+ 
+ #: screem.schemas.in.h:1
+ #, fuzzy
