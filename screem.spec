@@ -1,12 +1,12 @@
 Summary:	Web Site CReating and Editing EnvironMent
 Summary(pl):	¦rodowisko do tworzenia i edycji serwisów WWW
 Name:		screem
-Version:	0.7.0
+Version:	0.7.1
 Release:	1
 License:	GPL
 Group:		X11/Applications/Editors
+# Source0-md5:	ee46df5d1ddc673c97b37b50145f510f
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	2b9da71ab9389701be5e7ef9f362f30b
 URL:		http://www.screem.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -51,6 +51,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+#remove useless files
+rm -f $RPM_BUILD_ROOT%{_libdir}/%{name}/plugins/*.la
+
 %find_lang %{name} --with-gnome
 
 %clean
@@ -68,7 +71,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %dir %{_libdir}/screem
 %dir %{_libdir}/screem/plugins
-%attr(755,root,root) %{_libdir}/screem/plugins/*
+%attr(755,root,root) %{_libdir}/screem/plugins/*.so
 %{_datadir}/screem
 %{_pixmapsdir}/*
 %{_sysconfdir}/gconf/schemas/*
