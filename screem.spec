@@ -5,27 +5,27 @@ Version:	0.7.1
 Release:	2
 License:	GPL
 Group:		X11/Applications/Editors
-# Source0-md5:	ee46df5d1ddc673c97b37b50145f510f
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5:	ee46df5d1ddc673c97b37b50145f510f
 URL:		http://www.screem.org/
-BuildRequires:  GConf2-devel
+BuildRequires:	GConf2-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:  glib2-devel >= 2.2.0
-BuildRequires:  gnome-vfs2-devel
-BuildRequires:  gtk+2-devel >= 2.2.0
-BuildRequires:  intltool >= 0.18
-BuildRequires:  libbonobo-devel
-BuildRequires:  libbonoboui-devel >= 2.3.3-2
-BuildRequires:  libglade2-devel >= 1.99.2
-BuildRequires:  libgnome-devel >= 2.2.0
+BuildRequires:	glib2-devel >= 2.2.0
+BuildRequires:	gnome-vfs2-devel
+BuildRequires:	gtk+2-devel >= 2.2.0
+BuildRequires:	intltool >= 0.18
+BuildRequires:	libbonobo-devel
+BuildRequires:	libbonoboui-devel >= 2.3.3-2
+BuildRequires:	libglade2-devel >= 1.99.2
+BuildRequires:	libgnome-devel >= 2.2.0
 BuildRequires:	libgnomeprint-devel >= 2.2.0
-BuildRequires:  libgnomeprintui-devel >= 2.2.0
+BuildRequires:	libgnomeprintui-devel >= 2.2.0
 BuildRequires:	libgnomeui-devel >= 2.3.3.1-2
-BuildRequires:  libgtkhtml-devel
+BuildRequires:	libgtkhtml-devel
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel >= 2.4.3
-BuildRequires:  scrollkeeper
+BuildRequires:	scrollkeeper
 Requires(post):	Gconf2
 Requires(post):	/usr/bin/scrollkeeper-update
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
