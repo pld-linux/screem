@@ -20,6 +20,7 @@ BuildRequires:	gtkhtml-devel >= 0.8.3
 BuildRequires:	guile-devel
 BuildRequires:	libxml-devel >= 1.8.7
 BuildRequires:	libglade-devel >= 0.12
+BuildRequires:	gdk-pixbuf-gnome-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
