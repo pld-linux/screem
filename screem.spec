@@ -53,8 +53,7 @@ cp -f /usr/share/automake/config.* .
 	--enable-dbus \
 	--disable-update-mime \
 	--disable-update-desktop \
-	--disable-schemas-install \
-	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
+	--disable-schemas-install
 
 %{__make}
 
@@ -62,7 +61,8 @@ cp -f /usr/share/automake/config.* .
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT \
+	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
 
 #remove useless files
 rm -f $RPM_BUILD_ROOT%{_libdir}/%{name}/plugins/*.la
