@@ -1,12 +1,12 @@
 Summary:	Web Site CReating and Editing EnvironMent
 Summary(pl):	¦rodowisko do tworzenia i edycji serwisów WWW
 Name:		screem
-Version:	0.7.1
-Release:	3
+Version:	0.7.2
+Release:	1
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	ee46df5d1ddc673c97b37b50145f510f
+# Source0-md5:	b27dd275da6e5fb0a2ffcf4911fd522f
 URL:		http://www.screem.org/
 BuildRequires:	GConf2-devel
 BuildRequires:	autoconf
