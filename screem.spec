@@ -15,7 +15,7 @@ BuildRequires:	dbus-glib-devel >= 0.22
 BuildRequires:	gdk-pixbuf-devel >= 2.2.0
 BuildRequires:	glib2-devel >= 2.2.0
 BuildRequires:	gnome-vfs2-devel >= 2.8.0
-BuildRequires:	gtk+2-devel >= 2.4.0
+BuildRequires:	gtk+2-devel >= 2:2.4.0
 BuildRequires:	gtksourceview-devel
 BuildRequires:	intltool >= 0.18
 BuildRequires:	libbonobo-devel
