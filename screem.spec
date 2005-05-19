@@ -1,33 +1,31 @@
 Summary:	Web Site CReating and Editing EnvironMent
 Summary(pl):	¦rodowisko do tworzenia i edycji serwisów WWW
 Name:		screem
-Version:	0.12.2
+Version:	0.14.1
 Release:	1
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	http://dl.sourceforge.net/screem/%{name}-%{version}.tar.gz
-# Source0-md5:	34368e70de44a3f7fc1687e39dc5156e
+# Source0-md5:	b23bf53698df79477f83f3d66b6eab0d
 Patch0:		%{name}-desktop.patch
 URL:		http://www.screem.org/
 BuildRequires:	GConf2-devel >= 2.2.0
 BuildRequires:	automake
 BuildRequires:	dbus-glib-devel >= 0.22
 BuildRequires:	gdk-pixbuf-devel >= 2.2.0
-BuildRequires:	glib2-devel >= 2.2.0
-BuildRequires:	gnome-vfs2-devel >= 2.8.0
-BuildRequires:	gtk+2-devel >= 2:2.4.0
-BuildRequires:	gtksourceview-devel
-BuildRequires:	intltool >= 0.18
-BuildRequires:	libbonobo-devel
+BuildRequires:	gnome-menus-devel >= 2.10.0
+BuildRequires:	gnome-vfs2-devel >= 2.8.3
+BuildRequires:	gtk+2-devel >= 2:2.6.4
+BuildRequires:	gtksourceview-devel >= 1.2.0
+BuildRequires:	intltool >= 0.29
 BuildRequires:	libbonoboui-devel >= 2.4.0
+BuildRequires:	libcroco-devel >= 0.6.0
 BuildRequires:	libglade2-devel >= 2.3.0
 BuildRequires:	libgnome-devel >= 2.2.0
-BuildRequires:	libgnomeprint-devel >= 2.2.0
 BuildRequires:	libgnomeprintui-devel >= 2.2.0
 BuildRequires:	libgnomeui-devel >= 2.6.0
 BuildRequires:	libgtkhtml-devel >= 2.4.3
 BuildRequires:	libxml2-devel >= 2.4.3
-BuildRequires:	perl-XML-Parser
 BuildRequires:	rpmbuild(macros) >= 1.197
 BuildRequires:	scrollkeeper
 Requires(post,preun):	GConf2
