@@ -2,7 +2,7 @@ Summary:	Web Site CReating and Editing EnvironMent
 Summary(pl):	¦rodowisko do tworzenia i edycji serwisów WWW
 Name:		screem
 Version:	0.14.2
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	http://dl.sourceforge.net/screem/%{name}-%{version}.tar.gz
@@ -13,7 +13,7 @@ BuildRequires:	GConf2-devel >= 2.2.0
 BuildRequires:	automake
 BuildRequires:	dbus-glib-devel >= 0.33
 BuildRequires:	gdk-pixbuf-devel >= 2.2.0
-BuildRequires:	gnome-menus-devel >= 2.10.0
+BuildRequires:	gnome-menus-devel >= 2.12.0
 BuildRequires:	gnome-vfs2-devel >= 2.8.3
 BuildRequires:	gtk+2-devel >= 2:2.6.4
 BuildRequires:	gtksourceview-devel >= 1.2.0
