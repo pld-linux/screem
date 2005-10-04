@@ -1,12 +1,12 @@
 Summary:	Web Site CReating and Editing EnvironMent
 Summary(pl):	¦rodowisko do tworzenia i edycji serwisów WWW
 Name:		screem
-Version:	0.15.3
+Version:	0.15.4
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Editors
 Source0:	http://dl.sourceforge.net/screem/%{name}-%{version}.tar.gz
-# Source0-md5:	971db2bea71335ded45926da38021155
+# Source0-md5:	cad13154d5d46848485f49c96e6576c0
 Patch0:		%{name}-desktop.patch
 URL:		http://www.screem.org/
 BuildRequires:	GConf2-devel >= 2.2.0
@@ -45,6 +45,22 @@ and pages.
 %description -l pl
 SCREEM (Site CReating and Editing EnvironMent) jest zintegrowanym
 ¶rodowiskiem do tworzenia i prowadzenia serwisów i stron WWW.
+
+%package devel
+Summary:	SCREEM header files
+Summary(pl):	Pliki nag³ówkowe SCREEM
+Group:		X11/Development/Libraries
+Requires:	%{name} = %{version}-%{release}
+Requires:	gnome-vfs2-devel >= 2.8.3
+Requires:	gtk+2-devel >= 2:2.6.4
+Requires:	gtksourceview-devel >= 1.2.0
+Requires:	libxml2-devel >= 2.4.3
+
+%description devel
+SCREEM header files for plugin development.
+
+%description devel -l pl
+Pliki nag³ówkowe SCREEM do tworzenia wtyczek.
 
 %prep
 %setup -q
@@ -108,3 +124,8 @@ fi
 %{_datadir}/mime/packages/*
 %{_desktopdir}/screem.desktop
 %{_omf_dest_dir}/%{name}
+
+%files devel
+%defattr(644,root,root,755)
+%{_includedir}/%{name}
+%{_pkgconfigdir}/*.pc
