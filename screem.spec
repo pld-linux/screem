@@ -1,12 +1,15 @@
+
+# TODO
+# - take a look at libenchant - a unified wrapper for spellcheckers
 Summary:	Web Site CReating and Editing EnvironMent
 Summary(pl):	¦rodowisko do tworzenia i edycji serwisów WWW
 Name:		screem
-Version:	0.14.3
-Release:	2
+Version:	0.16.0
+Release:	1
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	http://dl.sourceforge.net/screem/%{name}-%{version}.tar.gz
-# Source0-md5:	effc32299ef5527482f58d7df1e8730e
+# Source0-md5:	31fdaad416d1d845fc267d8c27d59036
 Patch0:		%{name}-desktop.patch
 URL:		http://www.screem.org/
 BuildRequires:	GConf2-devel >= 2.2.0
@@ -66,7 +69,6 @@ rm -rf $RPM_BUILD_ROOT
 #remove useless files
 rm -f $RPM_BUILD_ROOT%{_libdir}/%{name}/plugins/*.la
 rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/no
-rm -r $RPM_BUILD_ROOT%{_datadir}/{application-registry,mime-info}
 
 %find_lang %{name} --with-gnome
 
