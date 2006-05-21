@@ -9,12 +9,13 @@ Group:		X11/Applications/Editors
 Source0:	http://dl.sourceforge.net/screem/%{name}-%{version}.tar.gz
 # Source0-md5:	88bfc0afadb905ddbed9bdfbc869602a
 Patch0:		%{name}-desktop.patch
+Patch1:		%{name}-deprecations.patch
 URL:		http://www.screem.org/
 BuildRequires:	GConf2-devel >= 2.2.0
+BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
 BuildRequires:	dbus-glib-devel >= 0.22
 BuildRequires:	enchant-devel >= 1.1.6
-BuildRequires:	gdk-pixbuf-devel >= 2.2.0
 BuildRequires:	gnome-menus-devel >= 2.10.0
 BuildRequires:	gnome-vfs2-devel >= 2.8.3
 BuildRequires:	gtk+2-devel >= 2:2.6.4
@@ -27,6 +28,7 @@ BuildRequires:	libgnome-devel >= 2.2.0
 BuildRequires:	libgnomeprintui-devel >= 2.2.0
 BuildRequires:	libgnomeui-devel >= 2.6.0
 BuildRequires:	libgtkhtml-devel >= 2.4.3
+BuildRequires:	libtool
 BuildRequires:	libxml2-devel >= 2.4.3
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.197
@@ -66,15 +68,22 @@ Pliki nag³ówkowe SCREEM do tworzenia wtyczek.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
-cp -f /usr/share/automake/config.* .
+%{__glib_gettextize}
+%{__libtoolize}
+%{__intltoolize}
+%{__aclocal}
+%{__autoheader}
+%{__automake}
+%{__autoconf}
 %configure \
 	--enable-dbus \
 	--enable-enchant \
 	--disable-update-mime \
 	--disable-update-desktop \
-	--disable-schemas-install
+	--disable-schemas-install	
 %{__make}
 
 %install
