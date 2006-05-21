@@ -1,0 +1,12 @@
+diff -aurN screem-0.16.1.orig/configure.ac screem-0.16.1/configure.ac
+--- screem-0.16.1.orig/configure.ac	2005-11-12 20:36:06.000000000 +0100
++++ screem-0.16.1/configure.ac	2006-05-21 13:31:06.306323688 +0200
+@@ -255,7 +255,7 @@
+ dnl being the blocker here, need a util function which does the
+ dnl same for utf-8
+ 
+-DEPRECATION_FLAGS="-DGTK_DISABLE_DEPRECATED -DGNOME_DISABLE_DEPRECATED -DGNOMEUI_DISABLE_DEPRECATED"
++DEPRECATION_FLAGS=""
+ 
+ CFLAGS="$SCREEM_CFLAGS -Wall $DEPRECATION_FLAGS $CFLAGS"
+ AC_SUBST(CFLAGS)
