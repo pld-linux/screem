@@ -1,5 +1,5 @@
 Summary:	Web Site CReating and Editing EnvironMent
-Summary(pl.UTF-8):   Środowisko do tworzenia i edycji serwisów WWW
+Summary(pl.UTF-8):	Środowisko do tworzenia i edycji serwisów WWW
 Name:		screem
 Version:	0.16.1
 Release:	3
@@ -50,7 +50,7 @@ SCREEM (Site CReating and Editing EnvironMent) jest zintegrowanym
 
 %package devel
 Summary:	SCREEM header files
-Summary(pl.UTF-8):   Pliki nagłówkowe SCREEM
+Summary(pl.UTF-8):	Pliki nagłówkowe SCREEM
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gnome-vfs2-devel >= 2.8.3
